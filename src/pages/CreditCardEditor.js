@@ -18,12 +18,12 @@ export default class CreditCardEditor extends React.Component {
         super(props)
 
         this.state = {
-            cardNumber          : '',
-            holderName          : 'Relmossaoui',
-            cvv                 : '*****',
-            [MONTH_STATE_NAME]  : 'MM',
-            [YEAR_STATE_NAME]   : 'YY',
-            focusedInput        : null
+            cardNumber              : '',
+            holderName              : 'Relmossaoui',
+            [CARD_CVV_FIELD_NAME]   : '*****',
+            [MONTH_STATE_NAME]      : 'MM',
+            [YEAR_STATE_NAME]       : 'YY',
+            focusedInput            : null
         }
 
 
@@ -43,8 +43,8 @@ export default class CreditCardEditor extends React.Component {
 
         return (
             <div className="credit-card-editor">
-                <CreditCard { ...this.state } onClick={this.onClick}/>
-                <Form { ...this.state } onChange={this.onChange} onClick={this.onClick}/>
+                <CreditCard { ...this.state } onClick={this.onClick} />
+                <Form { ...this.state } onChange={this.onChange} onClick={this.onClick} />
             </div>
         )
     }

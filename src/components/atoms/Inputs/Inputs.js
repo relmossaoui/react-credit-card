@@ -1,5 +1,7 @@
 import React from 'react'
+
 import './Inputs.css'
+
 /**
  * 
  * @param { Object   } props 
@@ -9,7 +11,7 @@ import './Inputs.css'
  * @param { function } props.onChange : 
  */
 export const Text = React.forwardRef((props, ref) => (
-    <input ref={ref} { ...props } className="input" autocomplete="off"/>  
+    <input ref={ref} { ...props } className="input" autoComplete="off"/>  
 ))
 
 /**

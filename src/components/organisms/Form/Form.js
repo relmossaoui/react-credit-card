@@ -33,14 +33,19 @@ export default class Form extends React.Component {
     }
     
     render() {
-        let { onChange : onEditCard, onClick : onClickField } = this.props;
+        let { onChange : onEditCard, onClick : onClickField, cardNumber, holderName } = this.props;
 
         
         const onChange = (e) => {
             let updatedState;
-           
+            
+            let value = e.target.value;
+
             switch(e.target.name) {
                 case CARD_NUMBER_FIELD_NAME : 
+                    if([4, 9, 14].includes(value.length) ) {
+                        value = value + ' '
+                    }
                     updatedState = 'cardNumber';
                     break;
                 
@@ -61,7 +66,7 @@ export default class Form extends React.Component {
                     break;
             }
                  
-            onEditCard({ [updatedState] : e.target.value })
+            onEditCard({ [updatedState] : value })
         }
     
         const onClick = (e) => {
@@ -74,7 +79,7 @@ export default class Form extends React.Component {
 
         return (
             <form className="card-from">
-                <Field 
+                <Field
                     ref={this[fieldsName.CARD_NUMBER_FIELD_NAME]} 
                     input="Text" 
                     onClick={onClick} 
@@ -83,6 +88,7 @@ export default class Form extends React.Component {
                     type="text" 
                     onChange={onChange} 
                     label="Card Number" 
+                    value={cardNumber}
                 />
 
                 <Field 
@@ -94,6 +100,7 @@ export default class Form extends React.Component {
                     type="text" 
                     onChange={onChange} 
                     label="Card Holders" 
+                    value={holderName}
                 />
                 
                 <div className="card-form__date-cvv">
@@ -131,6 +138,7 @@ export default class Form extends React.Component {
                         type="text" 
                         onChange={onChange} 
                         label="CVV" 
+                        value={this.props[CARD_CVV_FIELD_NAME]}
                     />
                 </div>
             </form>    
