@@ -1,0 +1,35 @@
+.card-form__date-cvv {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    width : 100%
+}
+
+.card-from {
+    width : 100%;
+    margin-top : 40px;
+    box-shadow : grey 0 0 10px;
+    padding: 140px 20px 80px 40px;
+    position: relative;
+    top : -140px
+}
+
+.date {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.date__field {
+    width : 50%;
+}
+
+.card-form__date {
+    width : 50%
+}
+
+.card-form__cvv {
+    width : 60%
+}

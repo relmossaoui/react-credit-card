@@ -1,0 +1,8 @@
+.credit-card-editor {
+    width : 30%;
+    height: 400px;
+    padding: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

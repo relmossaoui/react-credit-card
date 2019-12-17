@@ -1,0 +1,67 @@
+.credit-card {
+    z-index: 999;
+    width: 75%;
+    border-radius: 10px;
+    box-shadow:0 10px 10px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background: url('https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/21.jpeg');
+}
+
+.credit-card__header {
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.credit-card__logo {
+    width : auto;
+    height : 50px;
+    object-fit: cover;
+}
+
+.credit-card__number {
+    margin : 20px;
+    padding : 10px;
+    cursor: pointer;
+}
+
+.credit-card__field_selected {
+    border : 2px solid white;
+    outline: none;
+    border-radius: 10px;
+}
+
+.credit-card__footer {
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.credit-card__expires {
+    margin: 0 10px;
+    width : 25%;
+    text-align: end;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.credit-card__holder {
+    margin: 0 10px;
+    width : 70%;
+    text-align: start;
+    padding-left: 10px;
+    cursor: pointer;
+}
+.label {
+    margin: 0;
+    font-weight: lighter;
+    color: grey;
+}
+
+.credit-card__field {
+    margin : 0;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+}
