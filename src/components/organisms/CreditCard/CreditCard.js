@@ -12,11 +12,15 @@ import {
 
 import './CreditCard.css'
 
+const HOLDER_NAME_DEFAULT = "redouan elmossaoui"
+
+
 export default function(props) {
 
     let { cardNumber, holderName, cvv, month, year, focusedInput, onClick } = props;
 
     cardNumber = cardNumber.replace(/\s/g, '')
+    holderName = holderName.length > 0 ? holderName : HOLDER_NAME_DEFAULT
 
     let accountDigits = [...cardNumber.split(''), ...Array(16 - cardNumber.length ).fill('#') ]
 

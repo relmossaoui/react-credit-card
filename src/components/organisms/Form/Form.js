@@ -42,8 +42,10 @@ export default class Form extends React.Component {
             let value = e.target.value;
 
             switch(e.target.name) {
-                case CARD_NUMBER_FIELD_NAME : 
-                    if([4, 9, 14].includes(value.length) ) {
+                case CARD_NUMBER_FIELD_NAME :
+                    if (value.length > 19) {
+                        value = value.slice(0, -1)
+                    } else if([4, 9, 14].includes(value.length) && cardNumber.length < value.length) {
                         value = value + ' '
                     }
                     updatedState = 'cardNumber';

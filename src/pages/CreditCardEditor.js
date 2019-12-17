@@ -19,8 +19,8 @@ export default class CreditCardEditor extends React.Component {
 
         this.state = {
             cardNumber              : '',
-            holderName              : 'Relmossaoui',
-            [CARD_CVV_FIELD_NAME]   : '*****',
+            holderName              : '',
+            [CARD_CVV_FIELD_NAME]   : '',
             [MONTH_STATE_NAME]      : 'MM',
             [YEAR_STATE_NAME]       : 'YY',
             focusedInput            : null
