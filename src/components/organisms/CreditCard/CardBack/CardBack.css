@@ -1,0 +1,21 @@
+.credit-card__band {
+    height: 50px;
+    background-color: black;
+    margin: 20px 0;
+}
+
+.credit-card__cvv {
+    height: 30px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: right;
+    padding:10px 7px 0 0;
+    vertical-align: middle;
+    margin: 0 15px;
+}
+
+.credit-card__cvv-header {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0 5px 0;
+}

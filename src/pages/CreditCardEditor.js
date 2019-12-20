@@ -23,9 +23,9 @@ export default class CreditCardEditor extends React.Component {
             [CARD_CVV_FIELD_NAME]   : '',
             [MONTH_STATE_NAME]      : 'MM',
             [YEAR_STATE_NAME]       : 'YY',
-            focusedInput            : null
+            focusedInput            : null,
+            isCardFrontActive       : true
         }
-
 
         this.onChange = this.onChange.bind(this)
         this.onClick  = this.onClick.bind(this)
@@ -36,7 +36,11 @@ export default class CreditCardEditor extends React.Component {
     }
 
     onClick(focusedInput) {
-        this.setState({focusedInput})
+        this.setState({focusedInput}, (state) => {
+            this.setState({
+                isCardFrontActive : !(this.state.focusedInput === CARD_CVV_FIELD_NAME)
+            })
+        })
     }
 
     render() {

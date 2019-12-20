@@ -40,7 +40,7 @@ export default class Form extends React.Component {
             let updatedState;
             
             let value = e.target.value;
-
+            
             switch(e.target.name) {
                 case CARD_NUMBER_FIELD_NAME :
                     if (value.length > 19) {
@@ -138,6 +138,7 @@ export default class Form extends React.Component {
                         input="Text" 
                         name={CARD_CVV_FIELD_NAME} 
                         type="text" 
+                        onBlur={onBlur}
                         onChange={onChange} 
                         label="CVV" 
                         value={this.props[CARD_CVV_FIELD_NAME]}
